@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="615" pageHeight="818" columnWidth="575" leftMargin="20" rightMargin="20" topMargin="19" bottomMargin="20" uuid="25e3cc8c-4b27-49ae-b577-14994f979f66">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     productos.`id_producto` AS productos_id_producto,
+     productos.`producto` AS productos_producto,
+     productos.`descripcion` AS productos_descripcion,
+     productos.`precio_compra` AS productos_precio_compra,
+     productos.`precio_venta` AS productos_precio_venta,
+     productos.`existencias` AS productos_existencias
+FROM
+     `productos` productos]]>
+	</queryString>
+	<field name="productos_producto" class="java.lang.String"/>
+	<field name="productos_id_producto" class="java.lang.Integer"/>
+	<field name="productos_descripcion" class="java.lang.String"/>
+	<field name="productos_existencias" class="java.lang.Integer"/>
+	<field name="productos_precio_compra" class="java.lang.Integer"/>
+	<field name="productos_precio_venta" class="java.lang.Integer"/>
+	<group name="productos_id_producto">
+		<groupExpression><![CDATA[$F{productos_id_producto}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="344" height="32" forecolor="#000000" backcolor="#CCCCCC" uuid="d5327705-94f6-4ed3-83cd-1f91f9065f76"/>
+					<textElement>
+						<font fontName="Century Gothic" size="24" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{productos_id_producto}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="6babf9c2-faff-4d20-8907-090b301db01c"/>
+				</line>
+				<elementGroup/>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#009999" uuid="808825a2-1769-4fee-964e-f52f2aeb861e"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="fc9e2768-c4d5-4760-b155-1b689f71cc7c"/>
+					<textElement>
+						<font fontName="Century Gothic" size="34" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TecnoPhone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="a4952016-a8a9-4a7f-b3ef-1bcd00dd203b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="c9578dbe-6bca-43ab-8595-7138dc3b90ef"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="bb3b5d73-0331-474d-af07-f606a17337e7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="4f19afd4-6768-4348-9670-55f08101a90d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Precio Compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="9a4a94f0-2484-46d3-978a-15409c932d7f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="10e8e863-f927-4d52-ac6e-b2303756e801"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Existencias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="131" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="f93f430f-52bb-4692-ad3d-9b2406047e87"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Precio Venta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="fb1b977a-eea5-498c-8109-2da2a76d5e50"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="684c1753-6e33-42f6-bb8d-e0f3651e50f5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_producto}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="258e788d-3c20-445c-8a7a-ba9525f15e93"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_descripcion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="92db660f-76fd-4970-a991-ff3cc9cae44a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_existencias}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="6f7aa174-8e96-44db-803b-72b7bd0612a3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_precio_compra}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="b25264fb-f692-4fa0-80a7-8442156e8c41"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_precio_venta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="bd532240-e74a-4ac3-8405-ab510886c88f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="6aef1bef-0a6d-4282-978d-26dd6651a45e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="5a8e3df9-b7c7-44cc-a9f6-8302ca05c46a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
